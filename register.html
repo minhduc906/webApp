@@ -12,11 +12,11 @@
 <body>
     <div class="login-page">
         <div class="form">
-            <form class="register-form">
-                <input type="text" placeholder="Username" />
-                <input type="text" placeholder="Password" />
-                <input type="text" placeholder="email id" />
-                <button>create</button>
+            <form class="register-form" action="insert.php" method="POST">
+                <input type="text" name="username" placeholder="Username" />
+                <input type="password" name="password" placeholder="Password" />
+                <input type="email" name="email" placeholder="email id" />
+                <button type="submit">create</button>
                 <p class="message">Already Registered
                     <a href="#">Login</a>
                 </p>
@@ -32,8 +32,8 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
-        $('.message a').click(function(){
-            $('form').animate({height:"toggle", opacity:"toggle"},"slow");
+        $('.message a').click(function () {
+            $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
         });
     </script>
 </body>
